@@ -1,0 +1,15 @@
+piVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: sample-app
+  namespace: flux-system
+spec:
+  interval: 1m
+  path: "./apps/sample-app"
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+    namespace: flux-system
+  validation: client
+
