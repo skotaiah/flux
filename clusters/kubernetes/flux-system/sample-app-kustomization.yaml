@@ -4,7 +4,7 @@ metadata:
   name: sample-app
   namespace: flux-system
 interval: 1m
-path: "./apps/sample-app"
+path: "./clusters/kubernetes/apps/sample-app"
 prune: true
 sourceRef:
   kind: GitRepository
