@@ -1,14 +1,15 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
   name: sample-app
-spec:
-  interval: 1m
-  path: "./apps/sample-app"
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-    namespace: flux-system
-  validation: client
+  namespace: flux-system
+interval: 1m
+path: "./apps/sample-app"
+prune: true
+sourceRef:
+  kind: GitRepository
+  name: flux-system
+  namespace: flux-system
+validation: client
+
 
